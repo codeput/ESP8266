@@ -56,7 +56,7 @@ void setup() {
 //  Serial.begin(115200);
   pinMode(RELEPIN, OUTPUT);
   pinMode(DHTPIN, INPUT);
-  Blynk.begin(auth, "Atlantica_Ospiti", "atlantica123ospiti", "emax.tcp4.me");
+  Blynk.begin(auth, "AP-UP", "qqqqqqqq", "emax.tcp4.me");
   timer.setInterval(3000L, sendUptime);
 }
 BLYNK_CONNECTED() {
