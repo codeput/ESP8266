@@ -48,7 +48,6 @@ void tc()
   DHT11.read(DHTPIN);
   int ttc = DHT11.temperature - 2 ;
   if ((ttc >= tempset) & (pinData == 1)) {
-    ;
     digitalWrite(RELEPIN, false);
     Blynk.virtualWrite (4 , 0);
   }
