@@ -24,8 +24,6 @@ bool isFirstConnect = true;
   BLYNK_WRITE(V3)
 {
   tempset=param.asInt();
-//  Serial.println(tempset);
-  tc();
 }
 
 void sendUptime()
@@ -41,7 +39,6 @@ void tc()
 {
   DHT11.read(DHTPIN);
   int ttc = DHT11.temperature - 2 ;
-//  Serial.println(ttc);
   if (ttc >= tempset) {;
     digitalWrite(RELEPIN, false);
     Blynk.virtualWrite (4 , 0);
@@ -56,8 +53,9 @@ void setup() {
 //  Serial.begin(115200);
   pinMode(RELEPIN, OUTPUT);
   pinMode(DHTPIN, INPUT);
-  Blynk.begin(auth, "AP-UP", "qqqqqqqq", "emax.tcp4.me");
+  Blynk.begin(auth, "Telecom-71694417", "qqqqqqqq", "emax.tcp4.me");
   timer.setInterval(3000L, sendUptime);
+  timer.setInterval(3000L, tc);
 }
 BLYNK_CONNECTED() {
   if (isFirstConnect) {
