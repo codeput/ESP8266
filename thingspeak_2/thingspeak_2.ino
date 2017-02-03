@@ -9,13 +9,11 @@ unsigned long myChannelNumber = 77866;
 const char * myWriteAPIKey = "AEVF4ZUSWK71HVXF";
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
-const char* server = "api.thingspeak.com";
 const char* MY_SSID = "Telecom-71694417"; 
 const char* MY_PWD = "qqqqqqqq";
 int sent = 0;
 void setup() {
   Serial.begin(115200);
-//  ThingSpeak.begin(client);
   connectWifi();
 }
 
