@@ -10,9 +10,9 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
 float prevTemp = 0;
 const char* server = "api.thingspeak.com";
-String apiKey ="AEVF4ZUSWK71HVXF";
-const char* MY_SSID = "Telecom-71694417"; 
-const char* MY_PWD = "qqqqqqqq";
+String apiKey ="XXXXXX";
+const char* MY_SSID = "XXXXXXXXX"; 
+const char* MY_PWD = "XXXXXXXX";
 int sent = 0;
 void setup() {
   Serial.begin(115200);
